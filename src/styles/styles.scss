@@ -1,0 +1,180 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+$spacers: map-merge(
+  (
+    6: (
+      $spacer * 6,
+    ),
+    7: (
+      $spacer * 8,
+    ),
+    8: (
+      $spacer * 10,
+    ),
+    9: (
+      $spacer * 12,
+    ),
+    10: (
+      $spacer * 16,
+    ),
+  ),
+  $spacers
+);
+
+@import '~bootstrap/scss/bootstrap';
+
+.nav-icon {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+.custom-border {
+  border: 1px solid red;
+}
+
+.brand-img {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.nav-item-position {
+  position: relative;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  padding: 0 0;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+
+    span {
+      color: #474787;
+    }
+
+    span::before {
+      top: 0;
+      left: 0;
+      opacity: 1;
+    }
+
+    span::after {
+      bottom: 0;
+      right: 0;
+      opacity: 1;
+    }
+  }
+
+  span {
+    color: #706fd3;
+    position: relative;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      opacity: 0;
+      transition: all 0.4s;
+    }
+
+    &::before {
+      top: -10px;
+      left: -10px;
+      border-left: 3px solid #474787;
+      border-top: 3px solid #474787;
+    }
+
+    &::after {
+      bottom: -10px;
+      right: -10px;
+      border-right: 3px solid #474787;
+      border-bottom: 3px solid #474787;
+    }
+  }
+}
+
+// .competition-logo {
+//   width: 200px;
+//   height: 200px;
+//   object-fit: contain;
+// }
+
+.team-logo {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+
+.loading-btn {
+  width: 300px;
+}
+
+.competition-header {
+  min-height: 235px;
+}
+
+.competition-logo {
+  max-width: 200px;
+}
+
+.btn-custom {
+  background-color: #badc58;
+  color: white;
+}
+
+table td,
+th {
+  text-align: center;
+
+  &.right {
+    text-align: right;
+  }
+
+  &.left {
+    text-align: left;
+  }
+}
+
+.live-icon {
+  width: 20px;
+  height: 13px;
+  object-fit: cover;
+}
+
+.header {
+  vertical-align: middle;
+}
+
+.model-window {
+  position: absolute;
+  top: 200px;
+  left: 500px;
+}
+
+.tooltip {
+  cursor: default;
+}
+
+.match-primary {
+  color: $primary;
+}
+
+.match-info {
+  color: $info;
+}
+
+.custom-link,
+.custom-link:hover {
+  color: $info;
+}
