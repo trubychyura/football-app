@@ -20,7 +20,6 @@ export const fetchTeamData = async (teamId) => {
 };
 
 export const fetchMatch = async (matchId) => {
-  console.log(matchId, 'matchId');
   const pathname = `/matches/${matchId}`;
   const data = await fetchData(pathname);
   const {

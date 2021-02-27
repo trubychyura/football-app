@@ -86,7 +86,7 @@ export const spinnerList = {
   standingSpinner: { name: 'competition-standing-spinner', styles: 'my-8' },
   scorersSpinner: { name: 'competition-scorers-spinner', styles: 'my-8' },
   profileSpinner: { name: 'team-profile-spinner', styles: 'my-9' },
-  liveSpinner: { name: 'live-data-spinner', styles: 'my-9' },
+  liveSpinner: { name: 'live-data-spinner', styles: 'my-9', variant: 'info' },
   modalSpinner: { name: 'modal-spinner', styles: 'my-10' },
   buttonSpinner: { name: 'load-button', styles: '' },
 };

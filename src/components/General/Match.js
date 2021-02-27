@@ -9,7 +9,7 @@ import { getDate } from '../../helper/helper';
 import MatchScore from '../Competition/MatchScore.js';
 import Tooltip from './Tooltip';
 
-const Match = ({ match, styles = 'match-primary' }) => {
+const Match = ({ match, styles }) => {
   const { utcDate, score, homeTeam, awayTeam, id } = match;
   const { month, day, hours, minutes } = getDate(utcDate);
   const { showModal } = useContext(ModalContext);
